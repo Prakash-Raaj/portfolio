@@ -1,14 +1,17 @@
 // import { useState } from 'react'
 
-// import './App.css'
+import NavBar from './Pages/NavBar';
+
+import './App.css'
 
 function App() {
-
   return (
     <>
-    <div className="bg-amber-50">portfolio's main page</div>
+      <div className="flex flex-col m-2.5">
+        <NavBar />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
