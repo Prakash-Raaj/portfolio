@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useState } from 'react';
 import { FaCode } from 'react-icons/fa6';
 import { CiMenuBurger } from 'react-icons/ci';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoLocationOutline } from 'react-icons/io5';
 import { CiMail } from 'react-icons/ci';
 import { MdWorkOutline } from 'react-icons/md';
