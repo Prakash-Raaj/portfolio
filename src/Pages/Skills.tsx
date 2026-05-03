@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Skills = () => {
+interface SkillsProps {
+  id?: string;
+}
+
+const Skills = ({ id }: SkillsProps) => {
     return (
-        <div>
-            
+        <div id={id}>
+            Skills page
         </div>
     );
 };

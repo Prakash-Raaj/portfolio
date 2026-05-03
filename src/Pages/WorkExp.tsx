@@ -1,8 +1,12 @@
 import React from 'react';
 
-const WorkExp = () => {
+interface WorkExpProps {
+  id?: string;
+}
+
+const WorkExp = ({ id }: WorkExpProps) => {
     return (
-        <div>
+        <div id={id}>
             
         </div>
     );

@@ -3,6 +3,42 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Geist Mono', monospace;
+
+  /* colors */
+  --color-background: #f1faee;
+  --color-primary: #1d3557;
+  --color-secondary: #457b9d;
+  --color-accent: #e63946;
+  --color-support: #a8dadc;
+
+  /* animations */
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-fade-out: fade-out 0.3s ease-in;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
+body {
+  /* background-color: #f1faee; */
 }
 /* 
 body { font-family: 'Inter', sans-serif; }

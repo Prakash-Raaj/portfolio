@@ -1,8 +1,16 @@
 import React from 'react';
+import { IoLocationOutline } from 'react-icons/io5';
+import { CiMail } from 'react-icons/ci';
+import { MdWorkOutline } from 'react-icons/md';
+import { FaGithub } from 'react-icons/fa';
 
-const Main = () => {
+interface MainProps {
+  id?: string;
+}
+
+const Main = ({ id }: MainProps) => {
   return (
-    <div className="flex items-center min-h-screen w-full">
+    <div id={id} className="flex items-center min-h-screen w-full">
       {/* left part should be an image and right part should be name and title */}
 
       <div className="hidden lg:block w-1/2 h-screen">
@@ -15,19 +23,37 @@ const Main = () => {
 
       <div className="flex flex-col grow w-full lg:w-1/2">
         <div className="text-slate-900 tracking-wide">
-          <h1 className="font-mono  text-3xl md:text-5xl break-words pb-2 inline-block border-b-2">
-            Prakash Raaj Vasudevan
+          <h1 className="font-mono  tex-primary text-2xl md:text-4xl break-words pb-2 inline-block border-b-2">
+            Hi, I'm{' '}
+            <span className="text-accent">
+              Prakash Raaj Vasudevan
+            </span>
           </h1>
           {/* <hr className="w-full border-t-2 border-slate-400 mt-1" /> */}
-          <h2 className="py-3">
-            Full Stack Developer
-            {/* <span className="text-indigo-600">Developer</span> */}
-          </h2>
         </div>
+        <div className="py-3 intro flex flex-col gap-3">
+          <li className="flex items-center gap-2">
+            <MdWorkOutline />3 years of experience as Web developer
+          </li>
+          <li className="flex items-center gap-2">
+            <IoLocationOutline />
+            Toronto, Canada
+          </li>
+          <li className="flex items-center gap-2 hover:text-accent hover:text-xl transition-all duration-300 cursor-pointer">
+            <CiMail />
+            <a href="mailto:prakashraaj7996@gmail.com">
+              prakashraaj7996@gmail.com
+            </a>
+          </li>
 
-        <p className="italic text-indigo-600">
+          <li className="flex items-center gap-2  hover:text-accent hover:text-xl transition-all duration-300 cursor-pointer">
+            <FaGithub />
+            <a href="https://github.com/Prakash-Raaj">Prakash-raaj</a>
+          </li>
+        </div>
+        {/* <p className="italic text-indigo-600">
           Building scalable web applications with React & Node.js
-        </p>
+        </p> */}
       </div>
     </div>
   );

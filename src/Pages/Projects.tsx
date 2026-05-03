@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Projects = () => {
+interface ProjectsProps {
+  id?: string;
+}
+
+const Projects = ({ id }: ProjectsProps) => {
     return (
-        <div>
+        <div id={id}>
             
         </div>
     );
