@@ -2,6 +2,7 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { CiMail } from 'react-icons/ci';
 import { MdWorkOutline } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
+import illustration from '../assets/illustration.png';
 
 interface MainProps {
   id?: string;
@@ -14,7 +15,7 @@ const Main = ({ id }: MainProps) => {
 
       <div className="hidden lg:block w-1/2 h-screen">
         <img
-          src="../../src/assets/illustration.png"
+          src={illustration}
           alt="illustration of a boy coding"
           className="w-full h-full object-cover"
         />
