@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     {/* Look up at this  */}
-      <div className="flex flex-col m-2.5"> 
+      <div className="flex flex-col m-2.5 items-center"> 
         <NavBar />
         <Main id={"main" }/>
         <Skills id="skills" />

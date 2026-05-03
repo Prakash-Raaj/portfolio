@@ -48,7 +48,7 @@ const Main = ({ id }: MainProps) => {
 
           <li className="flex items-center gap-2  hover:text-accent hover:text-xl transition-all duration-300 cursor-pointer">
             <FaGithub />
-            <a href="https://github.com/Prakash-Raaj">Prakash-raaj</a>
+            <a href="https://github.com/Prakash-Raaj" target='_blank'>Prakash-raaj</a>
           </li>
         </div>
         {/* <p className="italic text-indigo-600">

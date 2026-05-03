@@ -11,6 +11,7 @@ const NavBar = () => {
   ];
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [hover, setHover] = useState(false);
 
   const handleToggle = () => {
     if (!isOpen) {
@@ -37,12 +38,20 @@ const NavBar = () => {
   return (
     <>
       <div className="sticky top-0 backdrop-blur bg-white/70 border-b border-gray-100 md:flex w-full items-center flex justify-between">
-        <div 
+        <div
           className="flex gap-1.5 cursor-pointer"
           onClick={() => scrollToSection('main')}
+          onMouseEnter={() => {
+            setHover(true);
+          }}
+          onMouseLeave={() => {
+            setHover(false);
+          }}
         >
           <FaCode size={20} className="text-2xl" />
-          <span>Prakash</span>
+          <span className="text-primary transition-all duration-900 hover:text-accent hover:text-bold hover:text-2xl">
+            {hover ? 'பிரகாஷ் ராஜ்' : 'Prakash Raaj'}
+          </span>
         </div>
         <div className="md:hidden">
           <CiMenuBurger
@@ -75,7 +84,7 @@ const NavBar = () => {
         >
           <div className="flex flex-col justify-center gap-2">
             {navheadings.map((item) => (
-              <div 
+              <div
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className="hover:text-accent transition-colors duration-300 cursor-pointer"
