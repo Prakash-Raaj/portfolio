@@ -10,7 +10,7 @@ interface SkillsProps {
 
 const Skills = ({ id }: SkillsProps) => {
   return (
-    <div id={id} className=''>
+    <div id={id} className='pt-25 h-80'>
       <div className="text-3xl tet-primary text-center pb-5">
         Technical Skills
       </div>
