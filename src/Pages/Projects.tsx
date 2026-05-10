@@ -5,7 +5,7 @@ interface ProjectsProps {
 
 const Projects = ({ id }: ProjectsProps) => {
     return (
-        <div id={id}>
+        <div id={id} className="h-230">
             
         </div>
     );

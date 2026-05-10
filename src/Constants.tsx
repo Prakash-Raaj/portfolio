@@ -20,6 +20,7 @@ import {
   SiApachekafka,
   SiGooglecloud,
   SiGithubactions,
+  SiNextdotjs
 } from 'react-icons/si';
 
 export const skillsData: SkillsBadgeProps[] = [
@@ -35,6 +36,10 @@ export const skillsData: SkillsBadgeProps[] = [
   {
     icon: <FaReact />,
     name: 'React',
+  },
+  {
+    icon:<SiNextdotjs />,
+    name: "Next.js"
   },
   {
     icon: <FaHtml5 />,

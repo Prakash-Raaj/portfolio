@@ -26,8 +26,8 @@ const WorkExpLine = (props: WorkExpLineProps) => {
         <div className="pb-10">
           <h3>{props.title}</h3>
           <p>
-            {props.companyName} • {props.fromDate}{' '}
-            {props.currentlyWorking ? '' : '- ' + props.toDate}{' '}
+            {props.companyName} • {props.fromDate} -{' '}
+            {props.currentlyWorking ? ' present' : props.toDate}{' '}
           </p>
         </div>
       </div>

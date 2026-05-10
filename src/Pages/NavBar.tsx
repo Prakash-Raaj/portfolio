@@ -7,7 +7,7 @@ const NavBar = () => {
     { name: 'skills', id: 'skills' },
     { name: 'experience', id: 'experience' },
     { name: 'projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Resume', id: 'resume' },
   ];
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -26,7 +26,22 @@ const NavBar = () => {
     }
   };
 
+  const downloadFile = () => {
+    const link = document.createElement('a');
+    link.href = '/portfolio/Prakash_Raaj_Resume.pdf';
+    link.download = 'Prakash_Raaj_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const scrollToSection = (id: string) => {
+    if (id === 'resume') {
+      downloadFile();
+      setIsOpen(false);
+      setIsAnimating(false);
+    }
+
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
